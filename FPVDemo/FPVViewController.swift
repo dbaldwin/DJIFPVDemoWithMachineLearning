@@ -336,11 +336,11 @@ class FPVViewController: UIViewController,  DJIVideoFeedListener, DJISDKManagerD
                 // on the video preview, which is as wide as the screen and has a 16:9
                 // aspect ratio. The video preview also may be letterboxed at the top
                 // and bottom.
-                let width = view.bounds.width
+                let width = fpvView.bounds.width
                 let height = width * 16 / 9
                 let scaleX = width / CGFloat(YOLO.inputWidth)
                 let scaleY = height / CGFloat(YOLO.inputHeight)
-                let top = (view.bounds.height - height) / 2
+                let top = (fpvView.bounds.height - height) / 2
                 
                 // Translate and scale the rectangle to our own coordinate system.
                 var rect = prediction.rect
